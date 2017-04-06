@@ -6,4 +6,15 @@
     <string name="text4">Keep me pressed longer...</string>
     <string name="text5">To go back use the Subject or Back button</string>
     <string name="text6">Button3</string>
+    <string name="text7">Welcome Relative Layout</string>
+    <string name="text8">Enter some text here</string>
+    <string name="text9">This is some text:</string>
+    <string name="text10">Button in RL</string>
+    <string name="text11">Some cascade buttons:</string>
+    <string name="text12">Cascade buttons end.</string>
+    <string name="text41">Button41</string>
+    <string name="text42">Button42</string>
+    <string name="text43">Button43</string>
+    <string name="title_activity_main4_with_relative_layout">Main4Activity_withRelativeLayout
+    </string>
 </resources>

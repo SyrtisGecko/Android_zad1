@@ -33,5 +33,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent_3);
     }
 
+    public void startFour_RL(View view) {
+        final Intent intent_4 = new Intent(this, Main4Activity_withRelativeLayout.class);
+        startActivity(intent_4);
+    }
+
 
 }
