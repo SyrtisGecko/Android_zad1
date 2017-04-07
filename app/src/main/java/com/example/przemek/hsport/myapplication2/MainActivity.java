@@ -38,5 +38,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent_4);
     }
 
-
+    public void startFive_TL(View view) {
+        final Intent intent_5 = new Intent(this, Main5Activity_withTableLayout.class);
+        startActivity(intent_5);
+    }
 }

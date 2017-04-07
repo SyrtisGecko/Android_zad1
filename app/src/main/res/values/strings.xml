@@ -15,6 +15,8 @@
     <string name="text41">Button41</string>
     <string name="text42">Button42</string>
     <string name="text43">Button43</string>
+    <string name="text13">Welcome Table Layout</string>
     <string name="title_activity_main4_with_relative_layout">Main4Activity_withRelativeLayout
     </string>
+    <string name="title_activity_main5_with_table_layout">Main5Activity_withTableLayout</string>
 </resources>
