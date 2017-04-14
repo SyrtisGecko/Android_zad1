@@ -29,7 +29,8 @@
             android:label="@string/title_activity_main4_with_relative_layout" />
         <activity
             android:name=".Main5Activity_withTableLayout"
-            android:label="@string/title_activity_main5_with_table_layout"></activity>
+            android:label="@string/title_activity_main5_with_table_layout" />
+        <activity android:name=".Main6Activity_withFrameLayout"></activity>
     </application>
 
 </manifest>
