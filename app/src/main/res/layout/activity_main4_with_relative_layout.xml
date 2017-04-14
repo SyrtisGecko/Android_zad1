@@ -47,7 +47,8 @@
         android:layout_alignRight="@+id/editText"
         android:layout_below="@+id/editText"
         android:layout_marginTop="10dp"
-        android:text="@string/text10" />
+        android:text="@string/text10"
+        android:onClick="goToContacts"/>
 
     <TextView
         android:id="@+id/textView3"

@@ -1,5 +1,7 @@
 package com.example.przemek.hsport.myapplication2;
 
+import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
@@ -25,6 +27,13 @@ public class Main4Activity_withRelativeLayout extends Activity {
             Toast.makeText(getApplicationContext(), "NOPE. Not this time.", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    public void goToContacts(View view) {
+        Intent intent = new Intent(this, Main6Activity_withFrameLayout.class);
+//        intent.setComponent(new ComponentName("com.android.contacts",
+//                                                "com.android.contacts.DialContactsEntryActivity"));
+        startActivity(intent);
     }
 
 }
