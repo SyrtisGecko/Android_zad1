@@ -42,4 +42,9 @@ public class MainActivity extends AppCompatActivity {
         final Intent intent_5 = new Intent(this, Main5Activity_withTableLayout.class);
         startActivity(intent_5);
     }
+
+    public void startSix_FL(View view) {
+        final Intent intent_6 = new Intent(this, Main6Activity_withFrameLayout.class);
+        startActivity(intent_6);
+    }
 }

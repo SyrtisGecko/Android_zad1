@@ -5,6 +5,23 @@
     android:id="@+id/frameLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:measureAllChildren="true"
     tools:context="com.example.przemek.hsport.myapplication2.Main6Activity_withFrameLayout">
+
+    <ImageView
+        android:layout_width="250px"
+        android:layout_height="250px"
+        android:layout_gravity="center"
+        android:onClick="backTo1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Frame Layout demo"
+        android:textSize="30px"
+        android:textStyle="bold" />
 
 </FrameLayout>

@@ -56,4 +56,12 @@
         android:layout_gravity="center_horizontal"
         android:text="Button for TL"
         android:onClick="startFive_TL"/>
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Button for FL"
+        android:onClick="startSix_FL"/>
 </LinearLayout>
