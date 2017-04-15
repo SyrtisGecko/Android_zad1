@@ -37,4 +37,11 @@ public class Main2Activity extends Activity {
         Intent dial = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:071-320-2319"));
         startActivity(dial);
     }
+
+    public void showPics(View view) {
+        Intent pics = new Intent();
+        pics.setType("image/pictures/*");
+        pics.setAction(Intent.ACTION_GET_CONTENT);
+        startActivity(pics);
+    }
 }
