@@ -18,7 +18,8 @@
             android:layout_alignParentRight="true"
             android:layout_marginBottom="30px"
             android:layout_marginRight="30px"
-            android:text="Play Roulette"/>
+            android:text="Play Roulette"
+            android:onClick="playRoulette"/>
 
     </RelativeLayout>
 
@@ -37,6 +38,15 @@
             android:scaleType="fitCenter"
             android:src="@drawable/roulette_kessel"
             android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="500px"
+            android:layout_height="500px"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/kulka1"
+            android:id="@+id/ball1"
+            android:visibility="visible"/>
 
     </FrameLayout>
 

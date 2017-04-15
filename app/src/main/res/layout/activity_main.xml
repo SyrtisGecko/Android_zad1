@@ -94,4 +94,16 @@
         android:layout_gravity="center_horizontal"
         android:text="Get Details"
         android:onClick="getDetails"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40px" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Roulette Game"
+        android:onClick="playRouletteGame"/>
 </LinearLayout>

@@ -72,4 +72,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    public void playRouletteGame(View view) {
+        Intent intent = new Intent(this, RouletteGameActivity.class);
+        startActivity(intent);
+    }
 }
