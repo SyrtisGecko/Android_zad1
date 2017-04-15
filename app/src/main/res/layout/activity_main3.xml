@@ -26,4 +26,78 @@
         android:layout_gravity="bottom|right"
         android:text="Back"
         android:onClick="backTo1"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frameLayoutInActivity3">
+
+        <ImageView
+            android:layout_width="250px"
+            android:layout_height="250px"
+            android:layout_marginTop="100px"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageView3"
+            android:src="@drawable/ic_launcher" />
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="zoom"
+            android:id="@+id/buttonZoom"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="60px"
+            android:layout_marginBottom="300px"
+            android:onClick="zoom"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="clockwise"
+            android:id="@+id/buttonClockwise"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="300px"
+            android:onClick="clockwise"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fade"
+            android:id="@+id/buttonFade"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="60px"
+            android:layout_marginBottom="300px"
+            android:onClick="fade"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="blink"
+            android:id="@+id/buttonBlink"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="60px"
+            android:layout_marginBottom="150px"
+            android:onClick="blink"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="move"
+            android:id="@+id/buttonMove"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="150px"
+            android:onClick="move"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="slide"
+            android:id="@+id/buttonSlide"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="60px"
+            android:layout_marginBottom="150px"
+            android:onClick="slide"/>
+
+    </FrameLayout>
 </LinearLayout>
