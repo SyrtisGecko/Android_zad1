@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final int GET_DETAILS_RESULT_CODE = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +49,27 @@ public class MainActivity extends AppCompatActivity {
     public void startSix_FL(View view) {
         final Intent intent_6 = new Intent(this, Main6Activity_withFrameLayout.class);
         startActivity(intent_6);
+    }
+
+    public void getDetails(View view) {
+        Intent intent = new Intent(this, Main5Activity_withTableLayout.class);
+        startActivityForResult(intent, GET_DETAILS_RESULT_CODE);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == GET_DETAILS_RESULT_CODE) {
+            if(resultCode == RESULT_OK) {
+                String resultName = data.getStringExtra("name");
+                String resultSurname = data.getStringExtra("surname");
+                String resultDescription = data.getStringExtra("description");
+
+                TextView textViewName = (TextView) findViewById(R.id.textView6);
+                textViewName.setText("Name: " + resultName);
+                TextView textViewSurname = (TextView) findViewById(R.id.textView8);
+                textViewSurname.setText("Surname: " + resultSurname);
+                TextView textViewDescription = (TextView) findViewById(R.id.textView7);
+                textViewDescription.setText("Description: " + resultDescription);
+            }
+        }
     }
 }

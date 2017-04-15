@@ -64,4 +64,34 @@
         android:layout_gravity="center_horizontal"
         android:text="Button for FL"
         android:onClick="startSix_FL"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40px" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name:  " />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Surname:  " />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description:  " />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Get Details"
+        android:onClick="getDetails"/>
 </LinearLayout>

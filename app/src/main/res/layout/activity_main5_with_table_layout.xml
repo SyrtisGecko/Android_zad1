@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Surname" />
 
         <Button
             android:id="@+id/button11"
@@ -69,7 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Description" />
 
         <Button
             android:id="@+id/button12"
@@ -77,6 +77,20 @@
             android:layout_height="wrap_content"
             android:text="Button" />
     </TableRow>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/buttonSendAll"
+            android:layout_marginTop="30px"
+            android:text="Send All"
+            android:onClick="sendAll"/>
+    </RelativeLayout>
 
 
 </TableLayout>
