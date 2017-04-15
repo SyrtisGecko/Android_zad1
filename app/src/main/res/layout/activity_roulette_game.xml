@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.przemek.hsport.myapplication2.RouletteGameActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonPlayRoulette"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="30px"
+            android:layout_marginRight="30px"
+            android:text="Play Roulette"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayoutRoulette"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="#0f0"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="500px"
+            android:layout_height="500px"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/roulette_kessel"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+</LinearLayout>

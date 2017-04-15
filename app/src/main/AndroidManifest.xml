@@ -30,7 +30,8 @@
         <activity
             android:name=".Main5Activity_withTableLayout"
             android:label="@string/title_activity_main5_with_table_layout" />
-        <activity android:name=".Main6Activity_withFrameLayout"></activity>
+        <activity android:name=".Main6Activity_withFrameLayout" />
+        <activity android:name=".RouletteGameActivity"></activity>
     </application>
 
 </manifest>
