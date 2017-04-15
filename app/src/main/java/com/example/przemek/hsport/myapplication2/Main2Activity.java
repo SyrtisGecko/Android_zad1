@@ -44,4 +44,10 @@ public class Main2Activity extends Activity {
         pics.setAction(Intent.ACTION_GET_CONTENT);
         startActivity(pics);
     }
+
+    public void sendSMS(View view) {
+        Intent sms = new Intent(Intent.ACTION_SENDTO, Uri.parse("sms:604317811"));
+        sms.putExtra("sms_body", "testing sending sms as Intent in Android Activity");
+        startActivity(sms);
+    }
 }
