@@ -50,4 +50,9 @@ public class Main2Activity extends Activity {
         sms.putExtra("sms_body", "testing sending sms as Intent in Android Activity");
         startActivity(sms);
     }
+
+    public void openBrowser(View view) {
+        Intent browser = new Intent(Intent.ACTION_WEB_SEARCH, Uri.parse("http://www.google.com"));
+        startActivity(browser);
+    }
 }

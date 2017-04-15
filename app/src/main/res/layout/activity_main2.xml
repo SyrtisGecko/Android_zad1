@@ -66,4 +66,16 @@
         android:layout_gravity="center_horizontal"
         android:onClick="sendSMS"
         android:text="SMS" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50px" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="openBrowser"
+        android:text="Browser" />
 </LinearLayout>
