@@ -32,4 +32,9 @@ public class Main2Activity extends Activity {
         email.setType("message/rfc822");
         startActivity(Intent.createChooser(email, "Choose email client..."));
     }
+
+    public void dialNumber(View view) {
+        Intent dial = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:071-320-2319"));
+        startActivity(dial);
+    }
 }
