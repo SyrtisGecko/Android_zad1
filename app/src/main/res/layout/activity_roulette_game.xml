@@ -74,6 +74,13 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/yourBet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210px"
+            android:layout_marginTop="10px" />
+
+        <ImageView
             android:layout_width="500px"
             android:layout_height="500px"
             android:layout_gravity="center"

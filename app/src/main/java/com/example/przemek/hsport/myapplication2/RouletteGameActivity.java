@@ -32,7 +32,11 @@ public class RouletteGameActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == GET_BET) {
             if(resultCode == RESULT_OK) {
-                
+                System.out.println("Getting back after selecting bet.");
+                String bet = data.getStringExtra("bet");
+
+                ImageView yourBetImage = (ImageView) findViewById(R.id.yourBet);
+//                yourBetImage.setImage
             }
         }
     }
