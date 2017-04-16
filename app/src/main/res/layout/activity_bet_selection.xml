@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0, 1, 2"
+    tools:context="com.example.przemek.hsport.myapplication2.BetSelectionActivity">
+
+    <TableRow>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image0g"
+            android:src="@drawable/bet0g"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image1r"
+            android:src="@drawable/bet1r"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image2b"
+            android:src="@drawable/bet2b"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image3r"
+            android:src="@drawable/bet3r"/>
+    </TableRow>
+
+    <TableRow>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image4b"
+            android:src="@drawable/bet4b"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image5r"
+            android:src="@drawable/bet5r"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image6b"
+            android:src="@drawable/bet6b"/>
+    </TableRow>
+
+    <TableRow>
+
+        <ImageView
+            android:id="@+id/image1st12"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bet1st12" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:id="@+id/image2nd12"
+            android:scaleType="fitXY"
+            android:src="@drawable/bet2nd12"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:id="@+id/image3rd12"
+            android:scaleType="fitXY"
+            android:src="@drawable/bet3rd12"/>
+    </TableRow>
+
+</TableLayout>

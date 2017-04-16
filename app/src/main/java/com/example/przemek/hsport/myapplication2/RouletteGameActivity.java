@@ -1,5 +1,6 @@
 package com.example.przemek.hsport.myapplication2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,5 +20,10 @@ public class RouletteGameActivity extends AppCompatActivity {
         ImageView image = (ImageView) findViewById(R.id.ball1);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.counterclockwise);
         image.startAnimation(animation);
+    }
+
+    public void setTheBet(View view) {
+        Intent intent = new Intent(this, BetSelectionActivity.class);
+        startActivity(intent);
     }
 }
