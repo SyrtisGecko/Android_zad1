@@ -10,6 +10,8 @@ import android.widget.ImageView;
 
 public class RouletteGameActivity extends AppCompatActivity {
 
+    private static final int GET_BET = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,14 @@ public class RouletteGameActivity extends AppCompatActivity {
 
     public void setTheBet(View view) {
         Intent intent = new Intent(this, BetSelectionActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, GET_BET);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == GET_BET) {
+            if(resultCode == RESULT_OK) {
+                
+            }
+        }
     }
 }

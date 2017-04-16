@@ -44,14 +44,15 @@
             android:layout_marginTop="6dp"/>
 
         <Button
+            android:id="@+id/button24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button24"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="14dp"
             android:layout_below="@+id/button23"
+            android:layout_marginLeft="14dp"
             android:layout_marginTop="6dp"
-            android:onClick="setTheBet"/>
+            android:onClick="setTheBet"
+            android:text="Set the Bet" />
 
     </RelativeLayout>
 
