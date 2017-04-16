@@ -65,6 +65,46 @@
     </TableRow>
 
     <TableRow>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image7r"
+            android:src="@drawable/bet7r"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image8b"
+            android:src="@drawable/bet8b"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image9r"
+            android:src="@drawable/bet9r"/>
+    </TableRow>
+
+    <TableRow>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image10b"
+            android:src="@drawable/bet10b"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image11b"
+            android:src="@drawable/bet11b"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image12r"
+            android:src="@drawable/bet12r"/>
+    </TableRow>
+
+    <TableRow>
 
         <ImageView
             android:id="@+id/image1st12"
@@ -86,6 +126,46 @@
             android:id="@+id/image3rd12"
             android:scaleType="fitXY"
             android:src="@drawable/bet3rd12"/>
+    </TableRow>
+
+    <TableRow>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image1to18"
+            android:src="@drawable/bet1to18"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageeven"
+            android:src="@drawable/beteven"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imagered"
+            android:src="@drawable/betred"/>
+    </TableRow>
+
+    <TableRow>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image19to36"
+            android:src="@drawable/bet19to36"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageodd"
+            android:src="@drawable/betodd"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageblack"
+            android:src="@drawable/betblack"/>
     </TableRow>
 
 </TableLayout>
