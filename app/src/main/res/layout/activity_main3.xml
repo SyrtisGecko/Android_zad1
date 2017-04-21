@@ -99,5 +99,13 @@
             android:layout_marginBottom="150px"
             android:onClick="slide"/>
 
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:text="Linear and Frame Layout" />
+
     </FrameLayout>
 </LinearLayout>

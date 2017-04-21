@@ -60,7 +60,7 @@ public class RouletteGameActivity extends AppCompatActivity {
     public void playRoulette(View view) {
         Random rn = new Random();
         int n = rn.nextInt(37);
-        n = 4;                                      // !!! CHEATING !!!
+//        n = 4;                                      // !!! CHEATING !!!
         System.out.println("Wylosowano: " + n);
 
 //        ImageView image = (ImageView) findViewById(R.id.ball1);
