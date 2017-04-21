@@ -97,6 +97,17 @@
             android:id="@+id/ball1"
             android:visibility="visible"/>
 
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10px"
+            android:layout_marginBottom="10px"
+            android:text="Result: "
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
     </FrameLayout>
 
 </LinearLayout>

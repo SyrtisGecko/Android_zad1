@@ -8,6 +8,8 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,9 +30,26 @@ public class RouletteGameActivity extends AppCompatActivity {
         phi.put(24, 330.786); phi.put(5, 340.515); phi.put(10, 350.244); phi.put(23, 359.973);
     }
 
+    private static final Map<Integer, String> betDetails;
+    static {
+        betDetails = new HashMap<Integer, String>();
+        betDetails.put(0, "bet0g"); betDetails.put(1, "bet1r"); betDetails.put(2, "bet2b"); betDetails.put(3, "bet3r");
+        betDetails.put(4, "bet4b"); betDetails.put(5, "bet5r"); betDetails.put(6, "bet6b");
+        betDetails.put(7, "bet7r"); betDetails.put(8, "bet8b"); betDetails.put(9, "bet9r");
+        betDetails.put(10, "bet10b"); betDetails.put(11, "bet11b"); betDetails.put(12, "bet12r");
+        betDetails.put(13, "bet13b"); betDetails.put(14, "bet14r"); betDetails.put(15, "bet15b");
+        betDetails.put(16, "bet16r"); betDetails.put(17, "bet17b"); betDetails.put(18, "bet18r");
+        betDetails.put(19, "bet19r"); betDetails.put(20, "bet20b"); betDetails.put(21, "bet21r");
+        betDetails.put(22, "bet22b"); betDetails.put(23, "bet23r"); betDetails.put(24, "bet24b");
+        betDetails.put(25, "bet25r"); betDetails.put(26, "bet26b"); betDetails.put(27, "bet27r");
+        betDetails.put(28, "bet28b"); betDetails.put(29, "bet29b"); betDetails.put(30, "bet30r");
+        betDetails.put(31, "bet31b"); betDetails.put(32, "bet32r"); betDetails.put(33, "bet33b");
+        betDetails.put(34, "bet34r"); betDetails.put(35, "bet35b"); betDetails.put(36, "bet36r");
+    }
+
     private static final int GET_BET = 0;
     
-    private String thisBet;
+    protected String thisBet = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +60,7 @@ public class RouletteGameActivity extends AppCompatActivity {
     public void playRoulette(View view) {
         Random rn = new Random();
         int n = rn.nextInt(37);
+        n = 4;                                      // !!! CHEATING !!!
         System.out.println("Wylosowano: " + n);
 
 //        ImageView image = (ImageView) findViewById(R.id.ball1);
@@ -49,16 +69,56 @@ public class RouletteGameActivity extends AppCompatActivity {
 
 
         playAnimation(n);
+//        validateScore(n);
     }
 
-    private void playAnimation(int n) {
+    private void validateScore(int n) {
+        if(thisBet == null || thisBet.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "You didn't select your bet! \nTry again.", Toast.LENGTH_SHORT).show();
+        } else if(betDetails.get(n).equals(thisBet)) {
+            Toast.makeText(getApplicationContext(), "!!!CONGRATULATIONS!!!\nYou won.", Toast.LENGTH_SHORT).show();
+        } else if(n%2 == 0 && thisBet.equals("beteven")) {
+            Toast.makeText(getApplicationContext(), "!!!CONGRATULATIONS!!!\nYou guessed it's even.", Toast.LENGTH_SHORT).show();
+        } else if(n%2 == 1 && thisBet.equals("betodd")) {
+            Toast.makeText(getApplicationContext(), "!!!CONGRATULATIONS!!!\nYou guessed it's odd.", Toast.LENGTH_SHORT).show();
+        } else if(thisBet.equals("betred")) {
+            if(n == 1 || n == 3 || n == 5 || n == 7 || n == 9 || n == 12 || n == 14 || n == 16 || n == 18 || n == 19 ||
+                    n == 21 || n == 23 || n == 25 || n == 27 || n == 30 || n == 32 || n == 34 || n == 36) {
+                Toast.makeText(getApplicationContext(), "!!!CONGRATULATIONS!!!\nYou guessed the color.", Toast.LENGTH_SHORT).show();
+            }
+        } else if(thisBet.equals("betblack")) {
+            if(n == 2 || n == 4 || n == 6 || n == 8 || n == 10 || n == 11 || n == 13 || n == 15 || n == 17 || n == 20 ||
+                    n == 22 || n == 24 || n == 26 || n == 28 || n == 29 || n == 31 || n == 33 || n == 35) {
+                Toast.makeText(getApplicationContext(), "!!!CONGRATULATIONS!!!\nYou guessed the color.", Toast.LENGTH_SHORT).show();
+            }
+        } else if (thisBet.equals("bet1st12") && n <= 12) {
+            Toast.makeText(getApplicationContext(), "!!!CONGRATULATIONS!!!\nYou guessed the number range.", Toast.LENGTH_SHORT).show();
+        } else if (thisBet.equals("bet2nd12") && n > 12 && n <= 24) {
+            Toast.makeText(getApplicationContext(), "!!!CONGRATULATIONS!!!\nYou guessed the number range.", Toast.LENGTH_SHORT).show();
+        } else if (thisBet.equals("bet3rd12") && n > 24) {
+            Toast.makeText(getApplicationContext(), "!!!CONGRATULATIONS!!!\nYou guessed the number range.", Toast.LENGTH_SHORT).show();
+        } else if (thisBet.equals("bet1to18") && n <= 18) {
+            Toast.makeText(getApplicationContext(), "!!!CONGRATULATIONS!!!\nYou guessed the number range.", Toast.LENGTH_SHORT).show();
+        } else if (thisBet.equals("bet19to36") && n > 18) {
+            Toast.makeText(getApplicationContext(), "!!!CONGRATULATIONS!!!\nYou guessed the number range.", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "Not this time.\nTry again.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void playAnimation(final int n) {
         double d = phi.get(n);
         final float f = (float) d;
+
         RotateAnimation rotate = new RotateAnimation(0, -1080-f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setDuration(3500);
         rotate.setInterpolator(new LinearInterpolator());
+
         final ImageView image= (ImageView) findViewById(R.id.ball1);
         image.setRotation(0);
+
+        final TextView text = (TextView) findViewById(R.id.resultText);
+        text.setText("Result: ");
 
         rotate.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -69,6 +129,9 @@ public class RouletteGameActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 image.setRotation(360-f);
+
+                text.setText("Result: " + n);
+                validateScore(n);
             }
 
             @Override
@@ -77,13 +140,7 @@ public class RouletteGameActivity extends AppCompatActivity {
             }
         });
 
-
         image.startAnimation(rotate);
-
-//        ImageView image = (ImageView) findViewById(R.id.ball1);
-//        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.counterclockwise2);
-//        animation.
-//        image.startAnimation(animation);
     }
 
     public void setTheBet(View view) {
