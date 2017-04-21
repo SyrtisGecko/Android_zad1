@@ -72,4 +72,9 @@ public class PracticingActivity extends AppCompatActivity {
             }
         }
     }
+
+    public void checkWidgets(View view) {
+        final Intent intent = new Intent(this, WidgetsActivity.class);
+        startActivity(intent);
+    }
 }

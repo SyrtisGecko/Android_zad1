@@ -33,7 +33,8 @@
         <activity android:name=".Main6Activity_withFrameLayout" />
         <activity android:name=".RouletteGameActivity" />
         <activity android:name=".BetSelectionActivity" />
-        <activity android:name=".PracticingActivity"></activity>
+        <activity android:name=".PracticingActivity" />
+        <activity android:name=".WidgetsActivity"></activity>
     </application>
 
 </manifest>
