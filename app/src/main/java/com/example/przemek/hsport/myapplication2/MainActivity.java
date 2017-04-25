@@ -82,4 +82,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RouletteGameActivity.class);
         startActivity(intent);
     }
+
+    public void playCalculator(View view) {
+        Intent intent = new Intent(this, CalculatorActivity.class);
+        startActivity(intent);
+    }
 }
