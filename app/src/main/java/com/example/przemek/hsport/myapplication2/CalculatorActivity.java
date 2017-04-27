@@ -12,7 +12,6 @@ public class CalculatorActivity extends AppCompatActivity {
     private String memory = "0";
     private int currentTask = 0;        // 1- for Add,  2 - for Sub,  3 - for Mult
 
-//    TextView displayText = (TextView) findViewById(R.id.textView10);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +72,7 @@ public class CalculatorActivity extends AppCompatActivity {
     public void onCEClick(View view) {
         currentDisplay = "0";
         memory = "0";
+        currentTask = 0;
         setDisplay();
     }
 
@@ -89,43 +89,40 @@ public class CalculatorActivity extends AppCompatActivity {
     public void onMultiplyClick(View view) {
         doCurrentTask();
         currentTask = 3;
-//        int mem = (Integer.parseInt(memory) * Integer.parseInt(currentDisplay));
-//        memory = "" + mem;
-        currentDisplay = "0";
+        currentDisplay = memory;
         setDisplay();
+        currentDisplay = "0";
     }
 
     public void onDivideClick(View view) {
         doCurrentTask();
         currentTask = 4;
-//        int mem = (Integer.parseInt(memory) / Integer.parseInt(currentDisplay));
-//        memory = "" + mem;
-        currentDisplay = "0";
+        currentDisplay = memory;
         setDisplay();
+        currentDisplay = "0";
     }
 
     public void onSubstractClick(View view) {
         doCurrentTask();
         currentTask = 2;
-//        int mem = (Integer.parseInt(memory) - Integer.parseInt(currentDisplay));
-//        memory = "" + mem;
-        currentDisplay = "0";
+        currentDisplay = memory;
         setDisplay();
+        currentDisplay = "0";
     }
 
     public void onAddClick(View view) {
         doCurrentTask();
         currentTask = 1;
-        int mem = (Integer.parseInt(memory) + Integer.parseInt(currentDisplay));
-        memory = "" + mem;
-        currentDisplay = "0";
+        currentDisplay = memory;
         setDisplay();
+        currentDisplay = "0";
     }
 
     public void onEqualsClick(View view) {
         doCurrentTask();
         currentDisplay = memory;
         setDisplay();
+        currentTask = 0;
     }
 
     private void setDisplay() {
@@ -162,6 +159,8 @@ public class CalculatorActivity extends AppCompatActivity {
         } else if(currentTask == 4) {
             int mem = (Integer.parseInt(memory) / Integer.parseInt(currentDisplay));
             memory = "" + mem;
+        } else {
+            memory = currentDisplay;
         }
     }
 }
